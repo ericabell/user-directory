@@ -29,7 +29,23 @@
     <div class="row">
       <div class="col-xs-12">
         {{#users}}
-          <div class="card" style="width: 40rem;">
+          <div class="person">
+            <img src="{{avatar}}" alt="image">
+            <h4>{{name}}</h4>
+            <p>
+              {{address.city}}, {{address.country}} | {{#job}} {{job}}, {{company}} {{/job}}  {{^job}} Available for hire {{/job}}
+            </p>
+            <p>
+              {{email}} | {{phone}}
+            </p>
+            <dl>
+              <dt>Education</dt>
+              <dd>{{university}}</dd>
+              <dt>Skills</dt>
+              <dd>{{#skills}} {{.}} {{/skills}}</dd>
+            </dl>
+          </div>
+          <!-- <div class="card" style="width: 40rem;">
             <img class="card-img-left" src="{{avatar}}" alt="Card image cap">
             <div class="card-block">
               <h4 class="card-title">{{name}}</h4>
@@ -43,7 +59,7 @@
                 Skills: {{#skills}} {{.}} {{/skills}}
               </p>
             </div>
-          </div>
+          </div> -->
         {{/users}}
 
       </div>
