@@ -11,16 +11,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <style type="text/css">
-    .todo-list {
-      list-style-type: none;
-      padding-left: 0.5em;
-    }
 
-    .todo-list li {
-      margin-bottom: 1rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -33,7 +25,7 @@
             <img src="{{avatar}}" alt="image">
             <h4>{{name}}</h4>
             <p>
-              {{address.city}}, {{address.country}} | {{#job}} {{job}}, {{company}} {{/job}}  {{^job}} Available for hire {{/job}}
+              {{address.city}}, {{address.country}} | {{#job}} {{job}}, {{company}} {{/job}}  {{^job}} <span>Available for hire</span> {{/job}}
             </p>
             <p>
               {{email}} | {{phone}}
