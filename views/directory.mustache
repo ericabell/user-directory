@@ -25,14 +25,16 @@
             <img src="{{avatar}}" alt="image">
             <h4>{{name}}</h4>
             <p>
-              {{address.city}}, {{address.country}} | {{#job}} {{job}}, {{company}} {{/job}}  {{^job}} <span>Available for hire</span> {{/job}}
+              {{#address.city}} {{address.city}}, {{address.country}} | {{/address.city}} {{#job}} {{job}}, {{company}} {{/job}}  {{^job}} <span>Available for hire</span> {{/job}}
             </p>
             <p>
               {{email}} | {{phone}}
             </p>
             <dl>
+              {{#university}}
               <dt>Education</dt>
               <dd>{{university}}</dd>
+              {{/university}}
               <dt>Skills</dt>
               <dd>{{#skills}} {{.}} {{/skills}}</dd>
             </dl>
