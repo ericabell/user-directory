@@ -1,3 +1,21 @@
 span {
   color: red;
 }
+
+.person {
+  border-style: solid;
+  border-width: 2px;
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+img {
+  border-style: solid;
+  border-width: 1px;
+  padding: 5px;
+}
